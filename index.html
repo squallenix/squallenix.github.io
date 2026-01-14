@@ -23,8 +23,10 @@ html, body {
 
 body {
   background-color: #f8fafc;
-  overflow: hidden; /* 🔒 disable native scroll */
+  overflow: hidden;     /* vertical scroll locked */
+  overflow-x: hidden;   /* prevent sideways jitter */
 }
+
 
 /* Each slide fills screen */
 .slide {
@@ -46,54 +48,6 @@ body {
 </style>
 
 </head>
-<script>
-const slides = document.querySelectorAll(".slide");
-let currentIndex = 0;
-let isAnimating = false;
-
-function goTo(index) {
-  if (index < 0 || index >= slides.length) return;
-
-  isAnimating = true;
-  currentIndex = index;
-
-  slides[currentIndex].scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
-
-  setTimeout(() => {
-    isAnimating = false;
-  }, 900);
-}
-
-// Mouse wheel
-window.addEventListener("wheel", (e) => {
-  e.preventDefault();
-  if (isAnimating) return;
-
-  if (e.deltaY > 0) {
-    goTo(currentIndex + 1);
-  } else {
-    goTo(currentIndex - 1);
-  }
-}, { passive: false });
-
-// Keyboard navigation
-window.addEventListener("keydown", (e) => {
-  if (isAnimating) return;
-
-  if (["ArrowDown", "PageDown", " "].includes(e.key)) {
-    e.preventDefault();
-    goTo(currentIndex + 1);
-  }
-
-  if (["ArrowUp", "PageUp"].includes(e.key)) {
-    e.preventDefault();
-    goTo(currentIndex - 1);
-  }
-});
-</script>
 
 <body>
 
@@ -853,6 +807,57 @@ SLIDE 6 — REMARKS & CONCLUSION
 </div>
 
 </section>
+<!-- ===============================
+FULL-PAGE SLIDE CONTROLLER
+================================ -->
+<script>
+const slides = document.querySelectorAll(".slide");
+let currentIndex = 0;
+let isAnimating = false;
+
+function goTo(index) {
+  if (index < 0 || index >= slides.length) return;
+
+  isAnimating = true;
+  currentIndex = index;
+
+  slides[currentIndex].scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  setTimeout(() => {
+    isAnimating = false;
+  }, 900);
+}
+
+// Mouse wheel
+window.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  if (isAnimating) return;
+
+  if (e.deltaY > 0) {
+    goTo(currentIndex + 1);
+  } else {
+    goTo(currentIndex - 1);
+  }
+}, { passive: false });
+
+// Keyboard navigation
+window.addEventListener("keydown", (e) => {
+  if (isAnimating) return;
+
+  if (["ArrowDown", "PageDown", " "].includes(e.key)) {
+    e.preventDefault();
+    goTo(currentIndex + 1);
+  }
+
+  if (["ArrowUp", "PageUp"].includes(e.key)) {
+    e.preventDefault();
+    goTo(currentIndex - 1);
+  }
+});
+</script>
 
 </body>
 </html>
