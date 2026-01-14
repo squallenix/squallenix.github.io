@@ -22,15 +22,21 @@ html {
 body {
   margin: 0;
   background-color: #f8fafc;
-  overflow-y: auto;
+
+  /* 🔥 THIS IS THE KEY PART */
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
-/* Each slide fills the screen */
+/* Each slide fills the screen and snaps */
 .slide {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 /* Your original slide container */
@@ -43,6 +49,7 @@ body {
   font-family: 'Inter', sans-serif;
 }
 </style>
+
 </head>
 
 <body>
