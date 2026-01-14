@@ -15,31 +15,26 @@
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
 
 <style>
-html {
-  scroll-behavior: smooth;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 body {
-  margin: 0;
   background-color: #f8fafc;
-
-  /* 🔥 THIS IS THE KEY PART */
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  overflow: hidden; /* 🔒 disable native scroll */
 }
 
-/* Each slide fills the screen and snaps */
+/* Each slide fills screen */
 .slide {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
-/* Your original slide container */
+/* Your original container */
 .slide-container {
   width: 1280px;
   height: 720px;
@@ -51,6 +46,54 @@ body {
 </style>
 
 </head>
+<script>
+const slides = document.querySelectorAll(".slide");
+let currentIndex = 0;
+let isAnimating = false;
+
+function goTo(index) {
+  if (index < 0 || index >= slides.length) return;
+
+  isAnimating = true;
+  currentIndex = index;
+
+  slides[currentIndex].scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  setTimeout(() => {
+    isAnimating = false;
+  }, 900);
+}
+
+// Mouse wheel
+window.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  if (isAnimating) return;
+
+  if (e.deltaY > 0) {
+    goTo(currentIndex + 1);
+  } else {
+    goTo(currentIndex - 1);
+  }
+}, { passive: false });
+
+// Keyboard navigation
+window.addEventListener("keydown", (e) => {
+  if (isAnimating) return;
+
+  if (["ArrowDown", "PageDown", " "].includes(e.key)) {
+    e.preventDefault();
+    goTo(currentIndex + 1);
+  }
+
+  if (["ArrowUp", "PageUp"].includes(e.key)) {
+    e.preventDefault();
+    goTo(currentIndex - 1);
+  }
+});
+</script>
 
 <body>
 
