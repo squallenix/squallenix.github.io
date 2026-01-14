@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>A.I.S.H.A – Project Presentation</title>
+
+<!-- Tailwind -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+
+<!-- Icons -->
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #f8fafc;
+  overflow-y: auto;
+}
+
+/* Each slide fills the screen */
+.slide {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Your original slide container */
+.slide-container {
+  width: 1280px;
+  height: 720px;
+  background: white;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+SLIDE 1 — TITLE
+===================================================== -->
+<section class="slide bg-slate-100">
+  <!-- PASTE YOUR *FIRST* slide-container HERE -->
+  <div class="slide-container">
+<!-- Background Elements -->
+<div class="bg-pattern"></div>
+<div class="absolute top-0 right-0 w-1/3 h-full bg-blue-50 opacity-30 skew-x-12 transform origin-top-right z-0"></div>
+<!-- Main Content -->
+<div class="relative z-10 flex flex-col items-center justify-center flex-1 w-full px-12 pt-8 pb-16">
+<!-- Logo Area -->
+<div class="mb-8">
+<div class="logo-placeholder">
+<i class="fas fa-robot text-4xl mb-3 opacity-50"></i>
+<p class="text-xs font-bold text-center px-2">[INSERT LOGO HERE]</p>
+</div>
+</div>
+<!-- Title Block -->
+<div class="text-center mb-10">
+<h1 class="title-font text-7xl font-extrabold text-slate-900 tracking-tight mb-2">
+                    A.I.S.H.A
+                </h1>
+<div class="flex justify-center mb-4">
+<div class="accent-bar"></div>
+</div>
+<h2 class="title-font text-3xl font-bold text-blue-600 mb-4">
+                    Advanced Intelligent Special Home Assistant
+                </h2>
+<p class="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+                    An intelligent, multimodal home-assistant system aimed at simplifying daily tasks through Image, Text, and Speech processing.
+                </p>
+</div>
+<!-- Tech Stack -->
+<div class="flex flex-wrap justify-center gap-3 mb-12 max-w-4xl">
+<div class="tech-badge px-5 py-2 rounded-full text-sm font-semibold flex items-center gap-2 shadow-sm">
+<i class="fab fa-python text-lg"></i> Python
+                </div>
+<div class="tech-badge px-5 py-2 rounded-full text-sm font-semibold flex items-center gap-2 shadow-sm">
+<i class="fas fa-desktop text-lg"></i> Tkinter Custom UI
+                </div>
+<div class="tech-badge px-5 py-2 rounded-full text-sm font-semibold flex items-center gap-2 shadow-sm">
+<i class="fas fa-database text-lg"></i> MySQL
+                </div>
+<div class="tech-badge px-5 py-2 rounded-full text-sm font-semibold flex items-center gap-2 shadow-sm">
+<i class="fas fa-brain text-lg"></i> Ollama AI
+                </div>
+<div class="tech-badge px-5 py-2 rounded-full text-sm font-semibold flex items-center gap-2 shadow-sm">
+<i class="fas fa-microphone text-lg"></i> Google Speech API
+                </div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-0 w-full bg-white bg-opacity-90 border-t border-slate-100 py-4 px-12 z-20">
+<div class="flex justify-between items-center text-slate-400 text-sm font-medium">
+<div class="flex items-center gap-2">
+<i class="fas fa-project-diagram"></i>
+<span>Project Showcase</span>
+</div>
+<div class="flex items-center gap-6">
+<p class="flex items-center gap-2">
+<i class="fas fa-user-circle"></i> [Presenter Name]
+                    </p>
+<p class="flex items-center gap-2">
+<i class="far fa-calendar-alt"></i> 2026-01-14
+                    </p>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<!-- =====================================================
+SLIDE 2 — PROBLEM & PURPOSE
+===================================================== -->
+<section class="slide bg-slate-50">
+  
+<div class="slide-container">
+<!-- Background Elements -->
+<div class="bg-pattern"></div>
+<div class="absolute top-0 right-0 w-1/4 h-full bg-slate-50 border-l border-slate-100 z-0"></div>
+<!-- Header -->
+<div class="relative z-10 pt-10 px-12 pb-6 flex justify-between items-end border-b border-slate-100 bg-white bg-opacity-90">
+<div>
+<p class="text-blue-600 font-bold tracking-wider text-xs uppercase mb-1">Project Overview</p>
+<h1 class="title-font text-4xl font-bold text-slate-800">Problem &amp; Purpose</h1>
+</div>
+<div class="text-right">
+<p class="title-font text-lg font-semibold text-slate-700">A.I.S.H.A</p>
+<p class="text-xs text-slate-500">Advanced Intelligent Special Home Assistant</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="relative z-10 flex-1 flex px-12 py-8 gap-10">
+<!-- Left Column: Problem & Purpose (Wider) -->
+<div class="flex-1 flex flex-col gap-6">
+<!-- Problem Statement -->
+<div class="content-card p-6 border-l-4 border-red-500">
+<div class="flex items-start gap-4">
+<div class="section-icon bg-red-50 text-red-500 flex-shrink-0">
+<i class="fas fa-exclamation-triangle"></i>
+</div>
+<div>
+<h2 class="title-font text-xl font-bold text-slate-800 mb-2">The Problem</h2>
+<p class="text-slate-600 leading-relaxed">
+                                Modern home users struggle with fragmented tools for daily digital tasks. There is a lack of a unified assistant that can seamlessly understand and process diverse input types—<strong>images, text, and speech</strong>—to simplify information retrieval and task execution in a single interface.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Purpose -->
+<div class="content-card p-6 border-l-4 border-blue-500 flex-1">
+<div class="flex items-start gap-4 h-full">
+<div class="section-icon bg-blue-50 text-blue-600 flex-shrink-0">
+<i class="fas fa-bullseye"></i>
+</div>
+<div class="flex flex-col">
+<h2 class="title-font text-xl font-bold text-slate-800 mb-2">Project Purpose</h2>
+<p class="text-slate-600 leading-relaxed mb-4">
+                                To create a responsive, user-friendly desktop assistant that centralizes multimodal interaction. A.I.S.H.A acts as an intelligent bridge between user intent and digital action, delivering clear, actionable outputs regardless of how the request is initiated.
+                            </p>
+<div class="mt-auto flex gap-3">
+<span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full border border-blue-100">User-Centric</span>
+<span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full border border-blue-100">Multimodal</span>
+<span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full border border-blue-100">Intelligent</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Objectives & Scope (Narrower) -->
+<div class="w-1/3 flex flex-col gap-6">
+<!-- Objectives -->
+<div class="bg-white rounded-xl p-1">
+<h3 class="flex items-center gap-2 text-slate-800 font-bold mb-4 px-2">
+<i class="fas fa-check-circle text-green-500"></i> Key Objectives
+                    </h3>
+<div class="space-y-3">
+<div class="flex items-start bg-slate-50 p-3 rounded-lg border border-slate-100">
+<div class="list-marker bg-white text-green-600 shadow-sm border border-slate-100 mt-0.5">1</div>
+<p class="text-sm text-slate-700 font-medium">Provide three intuitive input modes (image, text, speech)</p>
+</div>
+<div class="flex items-start bg-slate-50 p-3 rounded-lg border border-slate-100">
+<div class="list-marker bg-white text-green-600 shadow-sm border border-slate-100 mt-0.5">2</div>
+<p class="text-sm text-slate-700 font-medium">Offer fast, relevant AI-generated responses via local LLM</p>
+</div>
+<div class="flex items-start bg-slate-50 p-3 rounded-lg border border-slate-100">
+<div class="list-marker bg-white text-green-600 shadow-sm border border-slate-100 mt-0.5">3</div>
+<p class="text-sm text-slate-700 font-medium">Store and manage interaction history securely</p>
+</div>
+</div>
+</div>
+<!-- Scope -->
+<div class="bg-white rounded-xl p-1 mt-2">
+<h3 class="flex items-center gap-2 text-slate-800 font-bold mb-4 px-2">
+<i class="fas fa-layer-group text-purple-500"></i> Project Scope
+                    </h3>
+<ul class="space-y-3 px-2">
+<li class="flex items-center gap-3 text-sm text-slate-600">
+<i class="fas fa-desktop text-purple-400 w-5 text-center"></i>
+<p>Local Desktop Application (tkinter)</p>
+</li>
+<li class="flex items-center gap-3 text-sm text-slate-600">
+<i class="fas fa-brain text-purple-400 w-5 text-center"></i>
+<p>AI Reasoning via Ollama</p>
+</li>
+<li class="flex items-center gap-3 text-sm text-slate-600">
+<i class="fas fa-database text-purple-400 w-5 text-center"></i>
+<p>Persistent Storage with MySQL</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-0 w-full bg-white bg-opacity-90 border-t border-slate-100 py-3 px-12 z-20">
+<div class="flex justify-between items-center text-slate-400 text-xs font-medium">
+<div class="flex items-center gap-2">
+<span class="bg-slate-100 px-2 py-0.5 rounded text-slate-500">Page 02</span>
+<span>Problem &amp; Overview</span>
+</div>
+<div class="flex items-center gap-6">
+<p>A.I.S.H.A Project</p>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<!-- =====================================================
+SLIDE 3 — INPUT METHODS
+===================================================== -->
+<section class="slide bg-slate-100">
+  <div class="slide-container">
+    <!-- Background -->
+    <div class="bg-pattern"></div>
+    <div class="absolute top-0 right-0 w-1/2 h-64 bg-slate-50 rounded-bl-full z-0 opacity-50"></div>
+    <!-- Header -->
+    <div class="relative z-10 pt-8 px-12 pb-4 flex justify-between items-end border-b border-slate-100 bg-white bg-opacity-90">
+    <div>
+    <p class="text-blue-600 font-bold tracking-wider text-xs uppercase mb-1">System Architecture</p>
+    <h1 class="title-font text-4xl font-bold text-slate-800">Input Methods</h1>
+    </div>
+    <div class="text-right">
+    <p class="title-font text-lg font-semibold text-slate-700">Multimodal Interaction</p>
+    <p class="text-xs text-slate-500">Image • Text • Speech</p>
+    </div>
+    </div>
+    <!-- Main Content -->
+    <div class="relative z-10 flex-1 px-12 py-8">
+    <div class="grid grid-cols-3 gap-8 h-full">
+    <!-- Column A: Image Input -->
+    <div class="input-card border-t-4 border-blue-500 p-6">
+    <div class="flex items-center gap-3 mb-4">
+    <div class="icon-circle bg-blue-50 text-blue-600">
+    <i class="fas fa-image"></i>
+    </div>
+    <h2 class="title-font text-xl font-bold text-slate-800">Images to Explain</h2>
+    </div>
+    <!-- Placeholder -->
+    <div class="placeholder-box h-48 mb-5 bg-blue-50 bg-opacity-30 border-blue-200">
+    <i class="fas fa-camera text-4xl mb-2 opacity-40 text-blue-400"></i>
+    <p class="text-xs font-bold uppercase tracking-wide text-blue-400">[INSERT IMAGE HERE]</p>
+    <p class="text-[10px] text-blue-300 mt-1">Example: Screenshot or Diagram</p>
+    </div>
+    <!-- Description -->
+    <div class="flex-1">
+    <p class="text-sm text-slate-600 leading-relaxed mb-4 font-medium">
+                            User provides an image file; A.I.S.H.A interprets visual context to offer guidance or extraction.
+                        </p>
+    <div class="bg-slate-50 rounded-lg p-3">
+    <p class="text-xs font-bold text-slate-500 uppercase mb-2">Use Cases</p>
+    <ul class="space-y-2">
+    <li class="flex items-start gap-2 text-xs text-slate-600">
+    <i class="fas fa-check text-blue-500 mt-0.5"></i>
+    <span>Explaining complex diagrams</span>
+    </li>
+    <li class="flex items-start gap-2 text-xs text-slate-600">
+    <i class="fas fa-check text-blue-500 mt-0.5"></i>
+    <span>Identifying error messages</span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    <!-- Column B: Text Prompting -->
+    <div class="input-card border-t-4 border-indigo-500 p-6">
+    <div class="flex items-center gap-3 mb-4">
+    <div class="icon-circle bg-indigo-50 text-indigo-600">
+    <i class="fas fa-keyboard"></i>
+    </div>
+    <h2 class="title-font text-xl font-bold text-slate-800">Text Prompting</h2>
+    </div>
+    <!-- Placeholder -->
+    <div class="placeholder-box h-48 mb-5 bg-indigo-50 bg-opacity-30 border-indigo-200">
+    <i class="fas fa-terminal text-4xl mb-2 opacity-40 text-indigo-400"></i>
+    <p class="text-xs font-bold uppercase tracking-wide text-indigo-400">[SCREENSHOT PLACEHOLDER]</p>
+    <p class="text-[10px] text-indigo-300 mt-1">Example: Chat Interface</p>
+    </div>
+    <!-- Description -->
+    <div class="flex-1">
+    <p class="text-sm text-slate-600 leading-relaxed mb-4 font-medium">
+                            Standard input where users type specific queries. A.I.S.H.A processes prompts via local LLM.
+                        </p>
+    <div class="bg-slate-50 rounded-lg p-3">
+    <p class="text-xs font-bold text-slate-500 uppercase mb-2">Use Cases</p>
+    <ul class="space-y-2">
+    <li class="flex items-start gap-2 text-xs text-slate-600">
+    <i class="fas fa-check text-indigo-500 mt-0.5"></i>
+    <span>General Q&amp;A and research</span>
+    </li>
+    <li class="flex items-start gap-2 text-xs text-slate-600">
+    <i class="fas fa-check text-indigo-500 mt-0.5"></i>
+    <span>Code generation &amp; debugging</span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    <!-- Column C: Speech Input -->
+    <div class="input-card border-t-4 border-emerald-500 p-6">
+    <div class="flex items-center gap-3 mb-4">
+    <div class="icon-circle bg-emerald-50 text-emerald-600">
+    <i class="fas fa-microphone-alt"></i>
+    </div>
+    <h2 class="title-font text-xl font-bold text-slate-800">Speech-to-Text</h2>
+    </div>
+    <!-- Placeholder -->
+    <div class="placeholder-box h-48 mb-5 bg-emerald-50 bg-opacity-30 border-emerald-200">
+    <i class="fas fa-wave-square text-4xl mb-2 opacity-40 text-emerald-400"></i>
+    <p class="text-xs font-bold uppercase tracking-wide text-emerald-400">[INSERT IMAGE HERE]</p>
+    <p class="text-[10px] text-emerald-300 mt-1">Example: Voice Command UI</p>
+    </div>
+    <!-- Description -->
+    <div class="flex-1">
+    <p class="text-sm text-slate-600 leading-relaxed mb-4 font-medium">
+                            Spoken audio is captured and converted to text using Google Speech Recognition API.
+                        </p>
+    <div class="bg-slate-50 rounded-lg p-3">
+    <p class="text-xs font-bold text-slate-500 uppercase mb-2">Use Cases</p>
+    <ul class="space-y-2">
+    <li class="flex items-start gap-2 text-xs text-slate-600">
+    <i class="fas fa-check text-emerald-500 mt-0.5"></i>
+    <span>Hands-free operation</span>
+    </li>
+    <li class="flex items-start gap-2 text-xs text-slate-600">
+    <i class="fas fa-check text-emerald-500 mt-0.5"></i>
+    <span>Quick dictation of notes</span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Footer -->
+    <div class="absolute bottom-0 w-full bg-white bg-opacity-90 border-t border-slate-100 py-3 px-12 z-20">
+    <div class="flex justify-between items-center text-slate-400 text-xs font-medium">
+    <div class="flex items-center gap-2">
+    <span class="bg-slate-100 px-2 py-0.5 rounded text-slate-500">Page 03</span>
+    <span>System Inputs</span>
+    </div>
+    <div class="flex items-center gap-2">
+    <i class="fas fa-robot text-slate-300"></i>
+    <span>A.I.S.H.A Project</span>
+    </div>
+    </div>
+    </div>
+    </div>
+
+</section>
+
+<!-- =====================================================
+SLIDE 4 — EXECUTION & TECHNICAL DETAILS
+===================================================== -->
+<section class="slide bg-slate-50">
+  <div class="slide-container">
+<!-- Background Elements -->
+<div class="bg-pattern"></div>
+<div class="absolute bottom-0 left-0 w-1/3 h-1/2 bg-blue-50 rounded-tr-full z-0 opacity-40"></div>
+<!-- Header -->
+<div class="relative z-10 pt-8 px-12 pb-4 flex justify-between items-end border-b border-slate-100 bg-white bg-opacity-90">
+<div>
+<p class="text-blue-600 font-bold tracking-wider text-xs uppercase mb-1">Implementation</p>
+<h1 class="title-font text-4xl font-bold text-slate-800">Execution &amp; Technical Details</h1>
+</div>
+<div class="text-right">
+<p class="title-font text-lg font-semibold text-slate-700">Technology Stack</p>
+<p class="text-xs text-slate-500">Core Architecture &amp; Tools</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="relative z-10 flex-1 px-12 py-8 flex gap-10">
+<!-- Left Column: Tech Stack Specs (35%) -->
+<div class="w-1/3 flex flex-col gap-6">
+<!-- Environment Section -->
+<div>
+<h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 ml-1">Development Environment</h3>
+<div class="tech-item border-l-4 border-blue-500">
+<div class="tech-icon-box bg-blue-50 text-blue-600">
+<i class="fas fa-code"></i>
+</div>
+<div>
+<p class="font-bold text-slate-800">VS Code</p>
+<p class="text-xs text-slate-500">Integrated Development Environment</p>
+</div>
+</div>
+</div>
+<!-- Language Section -->
+<div>
+<h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 ml-1">Core Language</h3>
+<div class="tech-item border-l-4 border-yellow-500">
+<div class="tech-icon-box bg-yellow-50 text-yellow-600">
+<i class="fab fa-python"></i>
+</div>
+<div>
+<p class="font-bold text-slate-800">Python 3.x</p>
+<p class="text-xs text-slate-500">Backend Logic &amp; Processing</p>
+</div>
+</div>
+</div>
+<!-- Libraries Section -->
+<div class="flex-1">
+<h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 ml-1">Key Technologies</h3>
+<div class="space-y-3">
+<div class="tech-item">
+<div class="tech-icon-box bg-slate-100 text-slate-600">
+<i class="fas fa-desktop"></i>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-700 text-sm">tkinter</p>
+<p class="text-xs text-slate-500">Custom GUI Framework</p>
+</div>
+</div>
+<div class="tech-item">
+<div class="tech-icon-box bg-slate-100 text-slate-600">
+<i class="fas fa-database"></i>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-700 text-sm">MySQL</p>
+<p class="text-xs text-slate-500">Data Persistence &amp; History</p>
+</div>
+</div>
+<div class="tech-item">
+<div class="tech-icon-box bg-slate-100 text-slate-600">
+<i class="fas fa-brain"></i>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-700 text-sm">Ollama</p>
+<p class="text-xs text-slate-500">Local LLM Integration</p>
+</div>
+</div>
+<div class="tech-item">
+<div class="tech-icon-box bg-slate-100 text-slate-600">
+<i class="fas fa-microphone-lines"></i>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-700 text-sm">SpeechRecognition</p>
+<p class="text-xs text-slate-500">Google Speech API</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Code/Architecture Placeholder (65%) -->
+<div class="flex-1 h-full">
+<div class="mock-window">
+<!-- Window Header -->
+<div class="window-header">
+<div class="window-controls">
+<div class="control-dot bg-red-500"></div>
+<div class="control-dot bg-yellow-500"></div>
+<div class="control-dot bg-green-500"></div>
+</div>
+<div class="flex-1 text-center">
+<p class="text-xs text-slate-400 font-mono">main.py — A.I.S.H.A</p>
+</div>
+</div>
+<!-- Window Content -->
+<div class="placeholder-area">
+<div class="dashed-box">
+<i class="fas fa-file-code text-5xl mb-4 text-slate-600"></i>
+<p class="font-bold text-lg text-slate-400 mb-1">[CODE SCREENSHOT PLACEHOLDER]</p>
+<p class="text-sm text-slate-600 text-center max-w-md">
+                                Insert a screenshot of your main execution loop, architecture diagram, or key function definitions here.
+                            </p>
+<!-- Mock Code Lines for decoration -->
+<div class="absolute bottom-6 left-6 right-6 opacity-20 pointer-events-none">
+<div class="h-2 bg-slate-600 rounded w-1/3 mb-3"></div>
+<div class="h-2 bg-slate-600 rounded w-1/2 mb-3 ml-4"></div>
+<div class="h-2 bg-slate-600 rounded w-1/4 mb-3 ml-4"></div>
+<div class="h-2 bg-slate-600 rounded w-2/3 mb-3"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-0 w-full bg-white bg-opacity-90 border-t border-slate-100 py-3 px-12 z-20">
+<div class="flex justify-between items-center text-slate-400 text-xs font-medium">
+<div class="flex items-center gap-2">
+<span class="bg-slate-100 px-2 py-0.5 rounded text-slate-500">Page 04</span>
+<span>Implementation Details</span>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-terminal text-slate-300"></i>
+<span>Dev Environment</span>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<!-- =====================================================
+SLIDE 5 — OUTPUT DEMONSTRATION
+===================================================== -->
+<section class="slide bg-slate-100">
+  
+<div class="slide-container">
+<!-- Background -->
+<div class="bg-pattern"></div>
+<div class="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-bl-full z-0 opacity-50"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-slate-50 rounded-tr-full z-0 opacity-50"></div>
+<!-- Header -->
+<div class="relative z-10 pt-6 px-12 pb-2 flex justify-between items-end border-b border-slate-100 bg-white bg-opacity-95">
+<div>
+<p class="text-blue-600 font-bold tracking-wider text-xs uppercase mb-1">Results &amp; Validation</p>
+<h1 class="title-font text-3xl font-bold text-slate-800">System Outputs</h1>
+</div>
+<div class="text-right">
+<p class="title-font text-base font-semibold text-slate-700">Demonstration Gallery</p>
+<p class="text-xs text-slate-500">Live Execution Results</p>
+</div>
+</div>
+<!-- Main Content: Grid -->
+<div class="relative z-10 flex-1 px-12 py-6">
+<div class="grid grid-cols-2 grid-rows-2 gap-5 h-full">
+<!-- Card 1: Image Assistance -->
+<div class="output-card">
+<div class="card-header">
+<div class="flex items-center gap-2">
+<span class="badge bg-blue-100 text-blue-700">01</span>
+<span class="font-bold text-sm text-slate-700">Image Assistance</span>
+</div>
+<i class="fas fa-image text-slate-400 text-sm"></i>
+</div>
+<div class="screenshot-placeholder">
+<div class="dashed-border">
+<i class="fas fa-camera text-3xl text-slate-300 mb-2"></i>
+<p class="text-xs font-bold text-slate-400">[OUTPUT 1 - SCREENSHOT]</p>
+</div>
+</div>
+<div class="card-footer">
+<p class="text-xs text-slate-600 leading-snug">
+<strong>Action:</strong> A.I.S.H.A analyzes uploaded image content.<br/>
+<strong>Result:</strong> Contextual identification and relevant guidance provided to user.
+                        </p>
+</div>
+</div>
+<!-- Card 2: Text Prompt -->
+<div class="output-card">
+<div class="card-header">
+<div class="flex items-center gap-2">
+<span class="badge bg-indigo-100 text-indigo-700">02</span>
+<span class="font-bold text-sm text-slate-700">Text Response</span>
+</div>
+<i class="fas fa-comment-dots text-slate-400 text-sm"></i>
+</div>
+<div class="screenshot-placeholder">
+<div class="dashed-border">
+<i class="fas fa-terminal text-3xl text-slate-300 mb-2"></i>
+<p class="text-xs font-bold text-slate-400">[OUTPUT 2 - SCREENSHOT]</p>
+</div>
+</div>
+<div class="card-footer">
+<p class="text-xs text-slate-600 leading-snug">
+<strong>Action:</strong> User submits complex text query via UI.<br/>
+<strong>Result:</strong> LLM processes prompt and generates accurate, formatted text response.
+                        </p>
+</div>
+</div>
+<!-- Card 3: Speech Command -->
+<div class="output-card">
+<div class="card-header">
+<div class="flex items-center gap-2">
+<span class="badge bg-emerald-100 text-emerald-700">03</span>
+<span class="font-bold text-sm text-slate-700">Speech Handling</span>
+</div>
+<i class="fas fa-microphone text-slate-400 text-sm"></i>
+</div>
+<div class="screenshot-placeholder">
+<div class="dashed-border">
+<i class="fas fa-wave-square text-3xl text-slate-300 mb-2"></i>
+<p class="text-xs font-bold text-slate-400">[OUTPUT 3 - SCREENSHOT]</p>
+</div>
+</div>
+<div class="card-footer">
+<p class="text-xs text-slate-600 leading-snug">
+<strong>Action:</strong> Voice command captured and transcribed.<br/>
+<strong>Result:</strong> Correct transcription displayed and associated task executed instantly.
+                        </p>
+</div>
+</div>
+<!-- Card 4: Data/UI Flow -->
+<div class="output-card">
+<div class="card-header">
+<div class="flex items-center gap-2">
+<span class="badge bg-purple-100 text-purple-700">04</span>
+<span class="font-bold text-sm text-slate-700">UI &amp; Persistence</span>
+</div>
+<i class="fas fa-database text-slate-400 text-sm"></i>
+</div>
+<div class="screenshot-placeholder">
+<div class="dashed-border">
+<i class="fas fa-window-maximize text-3xl text-slate-300 mb-2"></i>
+<p class="text-xs font-bold text-slate-400">[OUTPUT 4 - SCREENSHOT]</p>
+</div>
+</div>
+<div class="card-footer">
+<p class="text-xs text-slate-600 leading-snug">
+<strong>Action:</strong> Reviewing history logs and settings.<br/>
+<strong>Result:</strong> MySQL data retrieved accurately; UI maintains state across sessions.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-0 w-full bg-white bg-opacity-90 border-t border-slate-100 py-3 px-12 z-20">
+<div class="flex justify-between items-center text-slate-400 text-xs font-medium">
+<div class="flex items-center gap-2">
+<span class="bg-slate-100 px-2 py-0.5 rounded text-slate-500">Page 05</span>
+<span>Output Gallery</span>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-images text-slate-300"></i>
+<span>A.I.S.H.A Project</span>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<!-- =====================================================
+SLIDE 6 — REMARKS & CONCLUSION
+===================================================== -->
+<section class="slide bg-slate-50">
+  
+<div class="slide-container">
+<!-- Background -->
+<div class="bg-pattern"></div>
+<div class="absolute top-0 left-0 w-1/3 h-full bg-slate-50 border-r border-slate-100 z-0"></div>
+<!-- Header -->
+<div class="relative z-10 pt-8 px-12 pb-4 flex justify-between items-end border-b border-slate-100 bg-white bg-opacity-90">
+<div>
+<p class="text-blue-600 font-bold tracking-wider text-xs uppercase mb-1">Project Wrap-up</p>
+<h1 class="title-font text-4xl font-bold text-slate-800">Remarks &amp; Next Steps</h1>
+</div>
+<div class="text-right">
+<p class="title-font text-lg font-semibold text-slate-700">Summary &amp; Future Scope</p>
+<p class="text-xs text-slate-500">Achievements • Roadmap • Conclusion</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="relative z-10 flex-1 px-12 py-8">
+<div class="flex gap-8 h-full">
+<!-- Left Column: Current Status (35%) -->
+<div class="w-[38%] flex flex-col gap-6">
+<!-- Achievements -->
+<div class="content-card">
+<div class="card-header">
+<div class="header-icon bg-blue-100 text-blue-600">
+<i class="fas fa-trophy"></i>
+</div>
+<h2 class="title-font text-lg font-bold text-slate-800">Key Achievements</h2>
+</div>
+<div class="flex-1">
+<div class="bullet-point">
+<span class="bullet-icon text-blue-500"><i class="fas fa-check"></i></span>
+<p class="text-sm text-slate-600">Unified <strong>multimodal inputs</strong> (Image, Text, Speech) in one interface.</p>
+</div>
+<div class="bullet-point">
+<span class="bullet-icon text-blue-500"><i class="fas fa-check"></i></span>
+<p class="text-sm text-slate-600">Developed responsive <strong>custom desktop UI</strong> using tkinter.</p>
+</div>
+<div class="bullet-point">
+<span class="bullet-icon text-blue-500"><i class="fas fa-check"></i></span>
+<p class="text-sm text-slate-600">Integrated <strong>Local AI (Ollama)</strong> for secure, offline-capable reasoning.</p>
+</div>
+<div class="bullet-point">
+<span class="bullet-icon text-blue-500"><i class="fas fa-check"></i></span>
+<p class="text-sm text-slate-600">Implemented reliable data persistence layer with <strong>MySQL</strong>.</p>
+</div>
+</div>
+</div>
+<!-- Tech Highlights -->
+<div class="content-card">
+<div class="card-header">
+<div class="header-icon bg-slate-100 text-slate-600">
+<i class="fas fa-code-branch"></i>
+</div>
+<h2 class="title-font text-lg font-bold text-slate-800">Technical Highlights</h2>
+</div>
+<div class="flex-1">
+<div class="bullet-point">
+<span class="bullet-icon text-slate-500"><i class="fas fa-layer-group"></i></span>
+<p class="text-sm text-slate-600">Clean architecture separating UI, Business Logic, and Data Services.</p>
+</div>
+<div class="bullet-point">
+<span class="bullet-icon text-slate-500"><i class="fas fa-recycle"></i></span>
+<p class="text-sm text-slate-600">Reusable prompt engineering pipeline across input types.</p>
+</div>
+<div class="bullet-point">
+<span class="bullet-icon text-slate-500"><i class="fab fa-google"></i></span>
+<p class="text-sm text-slate-600">Robust Speech-to-Text integration via Google API.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Future & Conclusion (65%) -->
+<div class="flex-1 flex flex-col gap-6">
+<!-- Future Enhancements -->
+<div class="content-card bg-white border-t-4 border-t-purple-500">
+<div class="card-header">
+<div class="header-icon bg-purple-100 text-purple-600">
+<i class="fas fa-rocket"></i>
+</div>
+<h2 class="title-font text-lg font-bold text-slate-800">Future Enhancements</h2>
+</div>
+<div class="grid grid-cols-2 gap-x-8 gap-y-2">
+<div class="bullet-point">
+<span class="bullet-icon text-purple-500"><i class="fas fa-arrow-right"></i></span>
+<p class="text-sm text-slate-600"><strong>Text-to-Speech (TTS):</strong> Add voice responses for full conversational loop.</p>
+</div>
+<div class="bullet-point">
+<span class="bullet-icon text-purple-500"><i class="fas fa-arrow-right"></i></span>
+<p class="text-sm text-slate-600"><strong>Smart Home IoT:</strong> Integrate with home automation APIs.</p>
+</div>
+<div class="bullet-point">
+<span class="bullet-icon text-purple-500"><i class="fas fa-arrow-right"></i></span>
+<p class="text-sm text-slate-600"><strong>Wake Word:</strong> Implement "Hey Aisha" activation.</p>
+</div>
+<div class="bullet-point">
+<span class="bullet-icon text-purple-500"><i class="fas fa-arrow-right"></i></span>
+<p class="text-sm text-slate-600"><strong>Context Memory:</strong> Improve long-term conversation retention.</p>
+</div>
+</div>
+</div>
+<!-- Bottom Row: Conclusion & Image -->
+<div class="flex-1 flex gap-6">
+<!-- Conclusion -->
+<div class="flex-1 conclusion-box">
+<div class="text-4xl text-blue-300">
+<i class="fas fa-quote-left"></i>
+</div>
+<div>
+<h3 class="title-font font-bold text-blue-900 mb-2">Conclusion</h3>
+<p class="text-sm text-blue-800 leading-relaxed">
+                                    A.I.S.H.A demonstrates a practical, extensible foundation for personal AI assistance. By combining visual, textual, and auditory understanding, it paves the way for more natural and efficient human-computer interaction in daily life.
+                                </p>
+</div>
+</div>
+<!-- Optional Image Placeholder -->
+<div class="w-48 h-full">
+<div class="img-placeholder">
+<i class="fas fa-robot text-4xl mb-2 opacity-30"></i>
+<p class="text-[10px] font-bold uppercase tracking-wider text-center px-4">
+                                    [OPTIONAL IMAGE]
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-0 w-full bg-white bg-opacity-90 border-t border-slate-100 py-3 px-12 z-20">
+<div class="flex justify-between items-center text-slate-400 text-xs font-medium">
+<div class="flex items-center gap-2">
+<span class="bg-slate-100 px-2 py-0.5 rounded text-slate-500">Page 06</span>
+<span>Conclusion</span>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-flag-checkered text-slate-300"></i>
+<span>A.I.S.H.A Project</span>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+</body>
+</html>
